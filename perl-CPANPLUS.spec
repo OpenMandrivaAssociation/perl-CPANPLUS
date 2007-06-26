@@ -21,7 +21,26 @@ BuildRequires:	perl-devel >= 5.8.1
 %endif
 BuildArch:	noarch
 Buildroot:	%{_tmppath}/%{name}-root
-BuildRequires:	perl(Archive::Extract) >=  0.16 perl(Crypt::OpenPGP) perl(File::Fetch) >= 0.08 perl(IPC::Cmd) >= 0.36 perl(Locale::Maketext::Simple) >= 0.01 perl(Log::Message) >= 0.01 perl(Module::CoreList) >= 2.09 perl(Module::Load) >= 0.10 perl(Module::Load::Conditional) >= 0.16 perl(Module::Loaded) >= 0.01 perl(Object::Accessor) >= 0.32 perl(Package::Constants) >= 0.01 perl(Params::Check) >= 0.22 perl(Term::UI) >= 0.05 perl(Test::Harness) >= 2.62 perl-version >= 0.70
+BuildRequires:	perl(Archive::Extract) >=  0.16
+BuildRequires: perl(Crypt::OpenPGP)
+BuildRequires: perl(File::Fetch) >= 0.08
+BuildRequires: perl(IPC::Cmd) >= 0.36
+BuildRequires: perl(Locale::Maketext::Simple) >= 0.01
+BuildRequires: perl(Log::Message) >= 0.01
+BuildRequires: perl(Module::CoreList) >= 2.09
+BuildRequires: perl(Module::Load) >= 0.10
+BuildRequires: perl(Module::Load::Conditional) >= 0.16
+BuildRequires: perl(Module::Loaded) >= 0.01
+BuildRequires: perl(Object::Accessor) >= 0.32
+BuildRequires: perl(Package::Constants) >= 0.01
+BuildRequires: perl(Params::Check) >= 0.22
+BuildRequires: perl(Term::UI) >= 0.05
+BuildRequires: perl(Test::Harness) >= 2.62
+BuildRequires: perl-version >= 0.70
+BuildRequires: perl(Archive::Tar)
+BuildRequires: perl(IO::Zlib)
+BuildRequires: perl(Module::Pluggable)
+BuildRequires: perl(Test::Harness)
 
 %description
 The CPANPLUS library is an API to the CPAN mirrors and a collection of

@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix CPANPLUS
 
-%define version 0.78
+%define version 0.80
 
 %define	rel	1
 %define release %mkrel %{rel}
@@ -20,7 +20,6 @@ Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{
 BuildRequires:	perl-devel >= 5.8.1
 %endif
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-root
 BuildRequires:	perl(Archive::Extract) >=  0.16
 BuildRequires: perl(Crypt::OpenPGP)
 BuildRequires: perl(File::Fetch) >= 0.08
@@ -40,7 +39,8 @@ BuildRequires: perl-version >= 0.70
 BuildRequires: perl(Archive::Tar)
 BuildRequires: perl(IO::Zlib)
 BuildRequires: perl(Module::Pluggable)
-BuildRequires: perl(Test::Harness)
+BuildRequires: perl(Log::Message::Simple)
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The CPANPLUS library is an API to the CPAN mirrors and a collection of

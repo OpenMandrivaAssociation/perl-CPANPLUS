@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix CPANPLUS
 
-%define version 0.80
+%define version 0.82
 
 %define	rel	1
 %define release %mkrel %{rel}

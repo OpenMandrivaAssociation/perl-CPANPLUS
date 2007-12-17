@@ -41,7 +41,6 @@ BuildRequires: perl(Archive::Tar)
 BuildRequires: perl(IO::Zlib)
 BuildRequires: perl(Module::Pluggable)
 BuildRequires: perl(Log::Message::Simple)
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The CPANPLUS library is an API to the CPAN mirrors and a collection of

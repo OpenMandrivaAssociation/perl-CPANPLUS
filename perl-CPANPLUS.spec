@@ -2,9 +2,9 @@
 %define name	perl-%{module}
 %define	modprefix CPANPLUS
 
-%define version 0.82
+%define version 0.84
 
-%define	rel	2
+%define	rel	1
 %define release %mkrel %{rel}
 %define _requires_exceptions perl(Your::Module::Here)
 

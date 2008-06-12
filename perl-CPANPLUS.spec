@@ -4,7 +4,7 @@
 
 %define version 0.84
 
-%define	rel	1
+%define	rel	2
 %define release %mkrel %{rel}
 %define _requires_exceptions perl(Your::Module::Here)
 

@@ -4,7 +4,7 @@
 
 %define version 0.84
 
-%define	rel	3
+%define	rel	4
 %define release %mkrel %{rel}
 %define _requires_exceptions perl(Your::Module::Here)
 
@@ -16,7 +16,6 @@ License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
-Source1:    bash-completion
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel >= 5.8.1
 %endif
@@ -65,16 +64,11 @@ rm -f t/20_CPANPLUS-Dist-MM.t
 rm -rf %{buildroot}
 %makeinstall_std
 
-# bash completion
-install -m 755 -d %{buildroot}%{_sysconfdir}/bash_completion.d
-install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/bash_completion.d/cpan2dist
-
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%{_sysconfdir}/bash_completion.d/cpan2dist
 %{_bindir}/cpan2dist
 %{_bindir}/cpanp
 %{_bindir}/cpanp-run-perl

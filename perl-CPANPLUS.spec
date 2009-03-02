@@ -4,7 +4,7 @@
 
 %define version 0.84
 
-%define	rel	4
+%define	rel	5
 %define release %mkrel %{rel}
 %define _requires_exceptions perl(Your::Module::Here)
 
@@ -43,6 +43,8 @@ BuildRequires: perl(Log::Message::Simple)
 Buildroot:	%{_tmppath}/%{name}-%{version}
 # (misc) not detected automatically, needed by CPANPLUS/Module.pm line 450
 Requires: perl(Module::CoreList)
+Requires: perl(Module::Pluggable)
+Requires: perl(Module::Signature)
 
 %description
 The CPANPLUS library is an API to the CPAN mirrors and a collection of

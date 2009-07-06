@@ -4,7 +4,7 @@
 
 %define version 0.84
 
-%define	rel	5
+%define	rel	6
 %define release %mkrel %{rel}
 %define _requires_exceptions perl(Your::Module::Here)
 
@@ -16,6 +16,7 @@ License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel >= 5.8.1
 %endif
@@ -40,11 +41,14 @@ BuildRequires: perl(Archive::Tar)
 BuildRequires: perl(IO::Zlib)
 BuildRequires: perl(Module::Pluggable)
 BuildRequires: perl(Log::Message::Simple)
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:%{_tmppath}/%{name}-%{version}-%{release}
+
 # (misc) not detected automatically, needed by CPANPLUS/Module.pm line 450
+# fixing bug https://qa.mandriva.com/show_bug.cgi?id=35018
 Requires: perl(Module::CoreList)
 Requires: perl(Module::Pluggable)
 Requires: perl(Module::Signature)
+Requires: perl(version)
 
 %description
 The CPANPLUS library is an API to the CPAN mirrors and a collection of

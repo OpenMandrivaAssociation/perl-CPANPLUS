@@ -20,7 +20,7 @@ BuildArch:	noarch
 BuildRequires:	perl(Archive::Extract) >=  0.16
 BuildRequires: perl(Crypt::OpenPGP)
 BuildRequires: perl(File::Fetch) >= 0.16
-BuildRequires: perl(IPC::Cmd) >= 0.36
+BuildRequires: perl(IPC::Cmd) >= 0.42
 BuildRequires: perl(Locale::Maketext::Simple) >= 0.01
 BuildRequires: perl(Log::Message) >= 0.01
 BuildRequires: perl(Module::CoreList) >= 2.09

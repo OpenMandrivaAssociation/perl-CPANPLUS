@@ -19,17 +19,18 @@ BuildRequires:	perl-devel >= 5.8.1
 BuildArch:	noarch
 BuildRequires:	perl(Archive::Extract) >=  0.16
 BuildRequires: perl(Crypt::OpenPGP)
-BuildRequires: perl(File::Fetch) >= 0.08
+BuildRequires: perl(File::Fetch) >= 0.16
 BuildRequires: perl(IPC::Cmd) >= 0.36
 BuildRequires: perl(Locale::Maketext::Simple) >= 0.01
 BuildRequires: perl(Log::Message) >= 0.01
 BuildRequires: perl(Module::CoreList) >= 2.09
 BuildRequires: perl(Module::Load) >= 0.10
-BuildRequires: perl(Module::Load::Conditional) >= 0.16
+BuildRequires: perl(Module::Load::Conditional) >= 0.28
 BuildRequires: perl(Module::Loaded) >= 0.01
-BuildRequires: perl(Object::Accessor) >= 0.32
+BuildRequires: perl(Object::Accessor) >= 0.34
 BuildRequires: perl(Package::Constants) >= 0.01
 BuildRequires: perl(Params::Check) >= 0.22
+BuildRequires: perl(Parse::CPAN::Meta) >= 0.02
 BuildRequires: perl(Term::UI) >= 0.05
 BuildRequires: perl(Test::Harness) >= 2.62
 BuildRequires: perl-version >= 0.70

@@ -1,21 +1,17 @@
-%define	module	CPANPLUS
-%define name	perl-%{module}
-%define	modprefix CPANPLUS
+%define	upstream_name	 CPANPLUS
+%define upstream_version 0.8601
 
-%define version 0.84
-
-%define	rel	6
-%define release %mkrel %{rel}
 %define _requires_exceptions perl(Your::Module::Here)
 
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:	API & CLI access to the CPAN mirrors
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
+URL:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CPANPLUS/%{upstream_name}-%{upstream_version}.tar.gz
 
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel >= 5.8.1
@@ -55,7 +51,7 @@ The CPANPLUS library is an API to the CPAN mirrors and a collection of
 interactive shells, commandline programs, etc, that use this API.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 # wants to write to the root fs
 rm -f t/20_CPANPLUS-Dist-MM.t
 
@@ -75,9 +71,9 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
+%doc README ChangeLog
 %{_bindir}/cpan2dist
 %{_bindir}/cpanp
 %{_bindir}/cpanp-run-perl
-%doc README ChangeLog
-%{perl_vendorlib}/%{modprefix}*
+%{perl_vendorlib}/CPANPLUS*
 %{_mandir}/*/*

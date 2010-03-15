@@ -1,5 +1,5 @@
 %define	upstream_name	 CPANPLUS
-%define upstream_version 0.9001
+%define upstream_version 0.9002
 
 %define _requires_exceptions perl(Your::Module::Here)
 
@@ -16,28 +16,30 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CPANPLUS/%{upstream_name}
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel >= 5.8.1
 %endif
-BuildArch:	noarch
-BuildRequires:	perl(Archive::Extract) >=  0.16
-BuildRequires: perl(Crypt::OpenPGP)
-BuildRequires: perl(File::Fetch) >= 0.16
-BuildRequires: perl(IPC::Cmd) >= 0.42
-BuildRequires: perl(Locale::Maketext::Simple) >= 0.01
-BuildRequires: perl(Log::Message) >= 0.01
-BuildRequires: perl(Module::CoreList) >= 2.09
-BuildRequires: perl(Module::Load) >= 0.10
-BuildRequires: perl(Module::Load::Conditional) >= 0.28
-BuildRequires: perl(Module::Loaded) >= 0.01
-BuildRequires: perl(Object::Accessor) >= 0.34
-BuildRequires: perl(Package::Constants) >= 0.01
-BuildRequires: perl(Params::Check) >= 0.22
-BuildRequires: perl(Parse::CPAN::Meta) >= 0.02
-BuildRequires: perl(Term::UI) >= 0.05
-BuildRequires: perl(Test::Harness) >= 2.62
-BuildRequires: perl-version >= 0.70
+
+BuildRequires: perl(Archive::Extract)          >=  0.160.0
 BuildRequires: perl(Archive::Tar)
+BuildRequires: perl(Crypt::OpenPGP)
+BuildRequires: perl(File::Fetch)               >= 0.160.0
 BuildRequires: perl(IO::Zlib)
-BuildRequires: perl(Module::Pluggable)
+BuildRequires: perl(IPC::Cmd)                  >= 0.420.0
+BuildRequires: perl(Locale::Maketext::Simple)  >= 0.10.0
+BuildRequires: perl(Log::Message)              >= 0.10.0
 BuildRequires: perl(Log::Message::Simple)
+BuildRequires: perl(Module::CoreList)          >= 2.90.0
+BuildRequires: perl(Module::Load)              >= 0.100.0
+BuildRequires: perl(Module::Load::Conditional) >= 0.280.0
+BuildRequires: perl(Module::Loaded)            >= 0.10.0
+BuildRequires: perl(Module::Pluggable)
+BuildRequires: perl(Object::Accessor)          >= 0.340.0
+BuildRequires: perl(Package::Constants)        >= 0.10.0
+BuildRequires: perl(Params::Check)             >= 0.220.0
+BuildRequires: perl(Parse::CPAN::Meta)         >= 0.20.0
+BuildRequires: perl(Term::UI)                  >= 0.50.0
+BuildRequires: perl(Test::Harness)             >= 2.620.0
+BuildRequires: perl(version)                   >= 1:0.700.0
+
+BuildArch:	noarch
 Buildroot:%{_tmppath}/%{name}-%{version}-%{release}
 
 # (misc) not detected automatically, needed by CPANPLUS/Module.pm line 450

@@ -1,5 +1,5 @@
 %define	upstream_name	 CPANPLUS
-%define upstream_version 0.9003
+%define upstream_version 0.9007
 
 %define _requires_exceptions perl(Your::Module::Here)
 

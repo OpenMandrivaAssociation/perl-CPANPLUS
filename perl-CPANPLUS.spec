@@ -10,7 +10,7 @@
 Summary:	API & CLI access to the CPAN mirrors
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}/

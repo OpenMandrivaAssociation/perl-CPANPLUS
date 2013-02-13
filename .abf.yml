@@ -1,2 +1,4 @@
+removed_sources:
+  CPANPLUS-0.9105.tar.gz: c55d61984885a04bb56463ff0faea0619a94de00
 sources:
-  "CPANPLUS-0.9105.tar.gz": c55d61984885a04bb56463ff0faea0619a94de00
+  CPANPLUS-0.9133.tar.gz: 8aae29c2c76303ddd3939e92dff45d6ef8e3679f

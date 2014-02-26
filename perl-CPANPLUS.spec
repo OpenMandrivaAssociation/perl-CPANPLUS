@@ -38,7 +38,7 @@ BuildRequires:	perl(Params::Check) >= 0.220.0
 BuildRequires:	perl(Parse::CPAN::Meta) >= 0.20.0
 BuildRequires:	perl(Term::UI) >= 0.50.0
 BuildRequires:	perl(Test::Harness) >= 2.620.0
-BuildRequires:	perl(version) >= 1:0.700.0
+BuildRequires:	perl(version)
 # (misc) not detected automatically, needed by CPANPLUS/Module.pm line 450
 # fixing bug https://qa.mandriva.com/show_bug.cgi?id=35018
 Requires:	perl(Module::CoreList)

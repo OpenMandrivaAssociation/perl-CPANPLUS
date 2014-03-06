@@ -1,5 +1,5 @@
 %define	modname	CPANPLUS
-%define modver	0.9133
+%define modver 0.9148
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Your::Module::Here\\)'
@@ -10,11 +10,11 @@
 Summary:	API & CLI access to the CPAN mirrors
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	7
+Release:	1
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CPANPLUS/%{modname}-%{modver}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/%{modname}/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 
 BuildRequires:	perl-devel
@@ -77,4 +77,5 @@ rm -f %{buildroot}%{_mandir}/man1/cpanp.1*
 %{perl_vendorlib}/CPANPLUS*
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 

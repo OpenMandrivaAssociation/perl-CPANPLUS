@@ -10,7 +10,7 @@
 Summary:	API & CLI access to the CPAN mirrors
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	5
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
@@ -20,7 +20,6 @@ BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Archive::Extract) >=  0.160.0
 BuildRequires:	perl(Archive::Tar)
-BuildRequires:	perl(Crypt::OpenPGP)
 BuildRequires:	perl(File::Fetch) >= 0.160.0
 BuildRequires:	perl(IO::Zlib)
 BuildRequires:	perl(IPC::Cmd) >= 0.420.0
@@ -40,7 +39,6 @@ BuildRequires:	perl(Term::UI) >= 0.50.0
 BuildRequires:	perl(Test::Harness) >= 2.620.0
 BuildRequires:	perl(version)
 # (misc) not detected automatically, needed by CPANPLUS/Module.pm line 450
-# fixing bug https://qa.mandriva.com/show_bug.cgi?id=35018
 Requires:	perl(Module::CoreList)
 Requires:	perl(Module::Pluggable)
 Requires:	perl(Module::Signature)
